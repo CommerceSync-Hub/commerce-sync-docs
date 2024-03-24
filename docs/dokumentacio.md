@@ -10,6 +10,8 @@ A Programcsomag felépítése, kapcsolódási pontok és Tech-Stack
 
 <!-- ![TechStack](.vitepress/dist/assets/TechStack.png) -->
 
+![alt text](TechStack.png)
+
 ## Folyamatábra
 
 A ProductBridge és WooSync programok folyamatábrái
