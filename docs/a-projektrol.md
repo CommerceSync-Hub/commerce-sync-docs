@@ -32,12 +32,12 @@ termékek feltöltése a webshop-jukba. Ez érthető, hiszen sok esetben ezek a
 felhasználók egyszemélyes vállalkozások, vagy olyan kisvállalkozások, családi
 vállalkozások, ahol nem alapvető kompetencia az informatika ismerete.
 
-1 https://www.manaferra.com/wordpress-statistics/, https://popupsmart.com/blog/wordpress-
-statistics, https://www.demandsage.com/wordpress-statistics/
-
-2 https://dataprot.net/statistics/woocommerce-usage-statistics/,
-https://storeleads.app/reports/woocommerce, https://meetanshi.com/blog/woocommerce-
-statistics/
+1. https://www.manaferra.com/wordpress-statistics/, 
+2. https://popupsmart.com/blog/wordpress-statistics, 
+3. https://www.demandsage.com/wordpress-statistics/
+4. https://dataprot.net/statistics/woocommerce-usage-statistics/,
+5. https://storeleads.app/reports/woocommerce, 
+6. https://meetanshi.com/blog/woocommerce-statistics/
 
 A WordPress és WooCommerce adminisztrációs felülete pedig számtalan
 útvesztőt ad a felhasználóknak. Túl sok opciót és túl sok hibalehetőség, amely
@@ -46,7 +46,7 @@ kezelni a felületet. Nem mindegyik vállalkozás tud vagy akar ilyen jellegű s
 eket elsajátítani, esetleg ilyen kompetenciájú munkavállalót csak ezen
 feladatok ellátására alkalmazni.
 
-### Három komponensből áll.
+### A Projekt 3 komponense
 
 1. Desktop applikáció: Product Bridge
 2. WordPress bővítmény: Sync Woo
@@ -54,21 +54,21 @@ feladatok ellátására alkalmazni.
 
 ### A fejlesztői csapat tagjai és feladatköreik
 
-Bagi Péter (fejlesztő és tesztelő):
-• eCommerce Sync Theme – Frontend és Backend
-• WooSync – Frontend és Backend
-• Product Bridge – Frontend
-• Dokumentáció
+#### Bagi Péter (fejlesztő és tesztelő)
+- eCommerce Sync Theme – Frontend és Backend
+- WooSync – Frontend és Backend
+- Product Bridge – Frontend
+- Dokumentáció
 
-Pernyész Dániel (fejlesztő és tesztelő)
-• Product Bridge – Front end és Backend, Adatbázis
-• WooSync – Adatbázis
-• Dokumentáció
+#### Pernyész Dániel (fejlesztő és tesztelő)
+- Product Bridge – Front end és Backend, Adatbázis
+- WooSync – Adatbázis
+- Dokumentáció
 
-Teszáry Péter (fejlesztő és tesztelő, projekt manager)
-• eCommcerce Sync Theme – Frontend és Backend
-• WooSync – Frontend és Backend, Adatbázis
-• Product Bridge – Frontend és Adatbázis
-• Design tervek
-• Dokumentáció
-• Project management
+#### Teszáry Péter (fejlesztő és tesztelő, projekt manager)
+- eCommcerce Sync Theme – Frontend és Backend
+- WooSync – Frontend és Backend, Adatbázis
+- Product Bridge – Frontend és Adatbázis
+- Design tervek
+- Dokumentáció
+- Project management
