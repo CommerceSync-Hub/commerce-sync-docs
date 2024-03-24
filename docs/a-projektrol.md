@@ -6,6 +6,8 @@ outline: deep
 
 This page demonstrates usage of some of the runtime APIs provided by VitePress.
 
+És ez lesz a dokumentációs oldal. Megnézem működik-e.
+
 The main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:
 
 ```md
