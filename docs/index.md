@@ -9,10 +9,10 @@ hero:
   actions:
     - theme: brand
       text: Dokumentáció
-      link: /markdown-examples
+      link: /dokumentacio
     - theme: alt
       text: Letöltés
-      link: /api-examples
+      link: https://github.com/2023e-vp-vizsgaremek/e-commerce
 
 features:
   - title: ProductBridge
