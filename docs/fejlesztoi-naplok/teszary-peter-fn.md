@@ -272,3 +272,11 @@ Tehát most ez kerül a hibanaplóba.
 A mai napon megterveztem miként fog majd működni az autentikáció és a beléptetés. A tervem az, hogy első belépéskor (First Attempt) kell megadni a WooSync bővítmény álltal generált API kulcsot és URL-t, majd a mentés gombra kattintvam az adatok ellenőrzése után, szinkronizálás történne a két adatbázis között(csak a felhasználók). Ha lefutott a szintkronizálás, akkor a User már be tud lépni a WordPress felhasználójával és jelszavával. 
 
 Lenne az applikációban/programban egy RESET gomb is, ami pedig minden adatot törölne a lokális adatbázisból. 
+
+## 2024-03-24
+
+A mai napon sikeres deploymentet végeztem el a fejlesztői oldalon. így már elérhető Github Pages-ként a dokumentációs oldalunk, amit tartalommal fel is töltöttem.
+Létrehoztam az aloldalakat, elhelyeztem a letöltési és egyéb linkeket. És feltöltöttem a saját fejlesztési és teszelési naplómat. 
+Ezt a napló bejegyzést már élesben a VS Code-ból írom most.
+
+Holnap folytatom a bővítmény fejlesztését.
