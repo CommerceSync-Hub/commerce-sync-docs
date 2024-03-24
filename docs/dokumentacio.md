@@ -8,19 +8,19 @@ outline: deep
 
 A Programcsomag felépítése, kapcsolódási pontok és Tech-Stack
 
-![TechStack](.vitepress/dist/assets/img/TechStack.png)
+<!-- ![TechStack](.vitepress/dist/assets/TechStack.png) -->
 
 ## Folyamatábra
 
 A ProductBridge és WooSync programok folyamatábrái
 
-![Folyamatábra](.vitepress/dist/assets/img/projektmunka-folyamatabra-foprogramok-Teszary-Peter-CommerceSync.png)
+<!-- ![Folyamatábra](.vitepress/dist/assets/projektmunka-folyamatabra-foprogramok-Teszary-Peter-CommerceSync.png) -->
 
 ## Adatbázis
 
 Az adatbázis létrehozásakor arra törekszünk, hogy minél egyszerűbb legyen az adatok felhasználása és tényleg csak a legszükségesebb adatokkal dolgozzunk. Éppen ezért az alábbi ábrán látható a használni kívánt táblák és adatok felosztása.
 
-![Adatbázisok](.vitepress/dist/assets/img/sync-databases.png)
+<!-- ![Adatbázisok](.vitepress/dist/assets/img/sync-databases.png) -->
 
 ## Az adatbázist létrehozó parancsok
 

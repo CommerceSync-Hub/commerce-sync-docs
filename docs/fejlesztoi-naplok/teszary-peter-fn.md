@@ -148,7 +148,7 @@ Valamint az egész Search Product ablakot inkább beépítem a kezdőlapba, hisz
 
 A Design-ban is módosítottam a szineket, a bordereket és az elrendezést. Kezd végre alakot ölteni a program. 
 
-![alt text](<../.vitepress/dist/assets/img/Pasted image 20240305214355.png>)
+<!-- ![alt text](<../.vitepress/dist/assets/img/Pasted image 20240305214355.png>) -->
 
 Holnap szeretném a Search Product ablakban megjelenííteni a rögzített termékeket is. És akkor már azt hiszem elkezdődhet a bővítmény fejlesztése is
 
