@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Commerce Sync Docs"
+  name: "CommerceSync Docs"
   text: 
   tagline: "This is our documentation site"
   actions:
