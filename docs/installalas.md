@@ -6,4 +6,4 @@ Töltsük le a bővítményt a bal oldalsó sávban lévő WooSync linkről. Tö
 
 <!-- ![WooSync Authentication](.vitepress/dist/assets/img/woosync-auth.png) -->
 
-![alt text](<../img/woosync-auth.png)
+![alt text](img/woosync-auth.png)

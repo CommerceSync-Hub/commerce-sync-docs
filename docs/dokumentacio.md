@@ -10,7 +10,7 @@ A Programcsomag felépítése, kapcsolódási pontok és Tech-Stack
 
 <!-- ![TechStack](.vitepress/dist/assets/TechStack.png) -->
 
-![alt text](<../img/TechStack.png)
+![alt text](img/TechStack.png)
 
 ## Folyamatábra
 
@@ -18,7 +18,7 @@ A ProductBridge és WooSync programok folyamatábrái
 
 <!-- ![Folyamatábra](.vitepress/dist/assets/projektmunka-folyamatabra-foprogramok-Teszary-Peter-CommerceSync.png) -->
 
-![alt text](<../img/projektmunka-folyamatabra.png)
+![alt text](img/projektmunka-folyamatabra.png)
 
 ## Adatbázis
 
@@ -26,7 +26,7 @@ Az adatbázis létrehozásakor arra törekszünk, hogy minél egyszerűbb legyen
 
 <!-- ![Adatbázisok](.vitepress/dist/assets/img/sync-databases.png) -->
 
-![alt text](<../img/sync-databases.png)
+![alt text](img/sync-databases.png)
 
 ## Az adatbázist létrehozó parancsok
 
