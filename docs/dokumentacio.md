@@ -4,7 +4,7 @@ outline: deep
 
 # A Projektről
 
-Ez a mi viszgaremekünk dokumentációs oldala és a következő sorok segítségével szeretnénk leírni, miért is jött létre a programunk (programjaink.)
+Ez a mi viszgaremekünk dokumentációs oldala és a következő sorok segítségével szeretnénk leírni, miért is jött létre a programunk (programjaink.) 
 
 
 The main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:
