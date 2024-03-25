@@ -5,11 +5,11 @@ layout: home
 hero:
   name: "CommerceSync Docs"
   text: 
-  tagline: "This is our documentation site"
+  tagline: "A projekt dokimentációs oldala"
   actions:
     - theme: brand
       text: Dokumentáció
-      link: /dokumentacio
+      link: /a-projektrol
     - theme: alt
       text: Letöltés
       link: https://github.com/2023e-vp-vizsgaremek/e-commerce

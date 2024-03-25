@@ -9,7 +9,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Kezdőlap', link: '/' },
-      { text: 'Dokumentáció', link: '/dokumentacio' }
+      { text: 'Dokumentáció', link: '/a-projektrol' }
     ],
 
     sidebar: [
