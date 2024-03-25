@@ -6,6 +6,9 @@ export default defineConfig({
   title: "Commerce Sync Docs",
   description: "A Projektünk dokumentációs oldala",
   themeConfig: {
+
+    logo: '/commercesynclogo.png',
+
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Kezdőlap', link: '/' },
