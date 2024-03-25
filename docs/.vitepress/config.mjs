@@ -7,7 +7,7 @@ export default defineConfig({
   description: "A Projektünk dokumentációs oldala",
   themeConfig: {
 
-    logo: 'assets/img/commercesynclogo.png',
+    logo: 'commercesynclogo.png',
 
     // https://vitepress.dev/reference/default-theme-config
     nav: [
