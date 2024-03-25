@@ -280,3 +280,13 @@ Létrehoztam az aloldalakat, elhelyeztem a letöltési és egyéb linkeket. És 
 Ezt a napló bejegyzést már élesben a VS Code-ból írom most.
 
 Holnap folytatom a bővítmény fejlesztését.
+
+## 2024-03-25
+
+Ma folytattam a dokumentációs oldal fejlesztését. Elkakadtam a logó megjelenítésénél a főoldalon. Furcsa, de dev módban megjelenik a logó, viszont build után preview módban sem. Már próbáltam úgy, hogy több helyről, több féle módon hivatkozom be a logót, de a furdításnál valami elromlik. Több fórumon is utána olvastam, eddig működő megoldás nélkül.
+
+Holnap megpróbálom a README.md fájlal egyetemben a root könyvtárban elhelyezni, kívül a dokumentációs projekten, de belül a repón és onnan URL alapján meghívni, mintha egy külső fájl lenne. Remélem sikerül. 
+
+A Desktop applikáció kapcsán pedig elkezdtem az átszervezést. MySQL adabázis lesz a projekt mögött. Az automatikus adatbázis létrehozása már működik is a táblákkal együtt. Illetve a Termék adatok egy részét már tárolja is az adatbázis. A cél, hogy minden átkerüljön erre az alapra, mert szerintem majd nagyban megkönnyíti a szinkronizációt. 
+
+Mivel már az API kulcsnak is van táblája az új adatbázisban, holnap szeretném létrehozni az applikációhoz azt az oldalt és osztályt, amelyben megjelenítem az eltárolt API kulcsot, URL-t és adott esetben resetelni is tudom a kapcsolatot és adatbázis tartalmat. 
