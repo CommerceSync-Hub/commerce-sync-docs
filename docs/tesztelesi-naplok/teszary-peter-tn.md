@@ -30,3 +30,62 @@ PS C:\Users\peter\Documents\GitHub\commerce-sync-docs>
 ```
 
 De jónéhány tesztelés után megtaláltam a megoldást. A gyökér mappában kell elhelyeznem az img mappát és abba a fájlokat. Ezek után már megtalálta a fájlokat, sikeres volt a build és sikeres a deployment is.
+
+## 2024-03-25
+
+A mai hiba a dokumentációs oldalon volt. Próbáltam megjeleníteni a logónkat a kezdőlapon, de sehogy sem sikerült. :dev státuszban rendben megjelent minden, de build után, preview-al már nem működik. Akárhogy probálkozom. A többi képi eleme rendben látszik, de a logo nem. 404 hibát kapok vissza a konzolban.
+
+## 2024-03-26
+
+A mai napon próbálom a bővítményben módosítani a kódot, hogy a genereált api kulcs a megfelelő helyen jelenjen meg. 
+A korábbi kód az options táblába mentette azt, de ez így nem megfelelő. 
+
+A korábbi kód, amely nem megfelelő helyre mentette az API kulcsot:
+
+```
+    function generate_api_key_callback()
+  {
+    // Ellenőrizzük, hogy van-e már mentett API kulcs
+    $existing_key = get_option('woosync_api_key');
+    
+    if (!$existing_key) {
+        // Ha nincs tárolt kulcs, akkor generáljunk egy újat
+        $api_key = wp_generate_password(32, false);
+
+        // Save the API key in the database
+        update_option('woosync_api_key', $api_key);
+    } else {
+        // Ha már van tárolt kulcs, használjuk azt
+        $api_key = $existing_key;
+    }
+```
+
+A módosított kód:
+
+```
+function generate_api_key_callback()
+  {
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'woosync_api_keys';
+
+    // Ellenőrizzük, hogy van-e már mentett API kulcs
+    $existing_key = $wpdb->get_var("SELECT api_key FROM $table_name");
+
+    if (!$existing_key) {
+        // Ha nincs tárolt kulcs, akkor generáljunk egy újat
+        $api_key = wp_generate_password(32, false);
+
+        // Mentsük el az új API kulcsot az adatbázisba
+        $wpdb->insert(
+            $table_name,
+            array(
+                'api_key' => $api_key
+            )
+        );
+    } else {
+        // Ha már van tárolt kulcs, használjuk azt
+        $api_key = $existing_key;
+    }
+```
+
+Most már csak azt kell javítanom, hogy megjelenjen a settings oldalon is, ám lehet, hogy később ezt az opciót elhagyom. Felesleges.
