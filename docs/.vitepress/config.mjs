@@ -41,6 +41,14 @@ export default defineConfig({
         
       },
       {
+        text: 'A csomag jövője',
+        items: [
+          { text: 'Fejlesztési lehetőségek', link: 'jovo' },
+        
+        ]
+        
+      }
+      {
         text: 'Letöltések',
         items: [
           { text: 'ProductBridge', link: 'https://github.com/2023e-vp-vizsgaremek/e-commerce/tree/master/Forr%C3%A1sk%C3%B3d/ProductBridge' },
