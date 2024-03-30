@@ -47,7 +47,7 @@ export default defineConfig({
         
         ]
         
-      }
+      },
       {
         text: 'Letöltések',
         items: [
