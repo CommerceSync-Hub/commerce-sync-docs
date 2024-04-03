@@ -15,7 +15,7 @@ hero:
       link: /a-projektrol
     - theme: alt
       text: Letöltés
-      link: https://github.com/2023e-vp-vizsgaremek/e-commerce
+      link: https://raw.githubusercontent.com/CommerceSync-Hub/commerce-sync-docs/main/docs/commercesynclogo.png
 
 features:
   - title: ProductBridge
