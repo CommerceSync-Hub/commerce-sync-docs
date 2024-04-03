@@ -7,7 +7,7 @@ hero:
   text: 
   tagline: "A projekt dokimentációs oldala"
   image:
-    src: https://github.com/CommerceSync-Hub/commerce-sync-docs/blob/main/docs/commercesynclogo.png
+    src: [/commercesynclogo.png](https://raw.githubusercontent.com/CommerceSync-Hub/commerce-sync-docs/main/docs/commercesynclogo.png)
     alt: CommerceSync Bundle
   actions:
     - theme: brand
@@ -15,7 +15,7 @@ hero:
       link: /a-projektrol
     - theme: alt
       text: Letöltés
-      link: https://raw.githubusercontent.com/CommerceSync-Hub/commerce-sync-docs/main/docs/commercesynclogo.png
+      link: https://github.com/2023e-vp-vizsgaremek/e-commerce
 
 features:
   - title: ProductBridge
