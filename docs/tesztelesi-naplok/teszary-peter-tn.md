@@ -89,3 +89,32 @@ function generate_api_key_callback()
 ```
 
 Most már csak azt kell javítanom, hogy megjelenjen a settings oldalon is, ám lehet, hogy később ezt az opciót elhagyom. Felesleges.
+
+## 2024-04-02
+
+A mai napon miután átszerveztem mindent, hogy az applikácó ezentúl MySQL-ben tárolja az adatokat, némi problémába futottam. Ha nem lett kitöltve a "tag", "GalleryUrls" és "ImageUrl" mező, akkor null értékre hoibát dobott a program. Ezért nem tudtam visszakérni sem az adatokat a SearchProductView oldalon sem. Tehát meg kellett oldanom, hogy null értéket is fel lehessen venni a termékek hozzáadásakor. 
+
+Ezt az alábbi módon, a táblát létrehozásánál tudtam megadni. Abban az esetben - ahogyan én is jártam - ha volt már tábla, ki kellett törölnöm, mert a létrehozáskor adom meg neki a default értéket:
+
+
+```
+// Táblák létrehozása
+            string createProductsTableQuery = @"
+                CREATE TABLE IF NOT EXISTS Products (
+                    ProductId INT AUTO_INCREMENT PRIMARY KEY,
+                    ProductName VARCHAR(255),
+                    Price DECIMAL(10,2),
+                    SalesPrice DECIMAL(10,2),
+                    Category VARCHAR(255),
+                    StockQuantity INT,
+                    SKU VARCHAR(255),
+                    Tags VARCHAR(255) DEFAULT '',
+                    ShortDescription TEXT,
+                    LongDescription TEXT,
+                    ImageUrl VARCHAR(255) DEFAULT '',
+                    GalleryUrls TEXT DEFAULT ''
+                )";
+
+```
+
+Továbbá a Userek hozzáadásakor is problémába futottam, mert elsőként nem akarta engedélyezni az adatbázisba beírást. Aztán rájöttem, hogy azért mert nem jól adom meg az adatbázis hozzáférést. 

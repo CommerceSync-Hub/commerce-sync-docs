@@ -290,3 +290,23 @@ Holnap megpróbálom a README.md fájlal egyetemben a root könyvtárban elhelye
 A Desktop applikáció kapcsán pedig elkezdtem az átszervezést. MySQL adabázis lesz a projekt mögött. Az automatikus adatbázis létrehozása már működik is a táblákkal együtt. Illetve a Termék adatok egy részét már tárolja is az adatbázis. A cél, hogy minden átkerüljön erre az alapra, mert szerintem majd nagyban megkönnyíti a szinkronizációt. 
 
 Mivel már az API kulcsnak is van táblája az új adatbázisban, holnap szeretném létrehozni az applikációhoz azt az oldalt és osztályt, amelyben megjelenítem az eltárolt API kulcsot, URL-t és adott esetben resetelni is tudom a kapcsolatot és adatbázis tartalmat. 
+
+## 2024-03-30
+
+Ma elkezdtem az átszervezését a WooSync bővítménynek. Erre azért volt szükség, hogy a Tiszta kód szellemében, minél kissebb részekre bontsam a bővítményt. Éppen ezért amit tudtam kiszerveztem külön classokba és át is neveztem a fájlokat, hogy beszédesebb legyen. Valamint az index.php-t is átneveztem woosync.php-ra. Ebből lett is némi kavarodás és merge conflict, de végül ezt is megoldottam. 
+
+## 2024-03-31
+
+A mai napon sikerült egy kicsit átalakítanom a WooSync kezelőfelületét. Készítettem egy menüsort az Admin menüben elhelyezkedő menüsoron kívül, mert úgy gondoltam így egyszerűbben használható és dizájnos lesz az applikáció. Elhelyeztem az alap menüpontokat is, de belinkeltem például a Desktop applikáció letöltési linkjét és a dokumentációs oldal linkjét is. A gombokat és a további elemeket is szebbé varázsoltam. Valamint ami lehet, külön classokba szerveztem a bővítményben az egyszerűbb kezelhetőség, fejleszthetőség érdekében.
+
+## 2024-04-02
+
+Ma végighaladtam a Desktop applikáción és átszerveztem itt is néhány osztályt. Többek között a teljes applikáció átállt a MySQL-re, SQLite-ról. Ennek azért láttam szükségét, mert így egyszerűbb ellenőrizni a tárolt adatok helyességét, továbbá úgy gondolom, hogy egyszerűbb lesz majd a szinkronizációs folyamatot is lekódolni. Hiszen így a phpmyadminban látok minden változást. 
+
+Akkadt némi probléma a null értékekkel a termékek kapcsán, de azt is orvosoltam. 
+
+## 2024-04-03
+
+A mai napon sikerült megoldanom a logo elhelyezését a dokumentációs oldalon. Egyszerűen a repository-ból hivatkoztam be a fájl elérési útvonalát (mintha egy külső fájl lenne) és így már rendben megjelenik a dokuemntációs oldal főoldalán.
+
+Illetve a mai napon elkészítettem a projektmunka prezentációjának prototípusát is.
