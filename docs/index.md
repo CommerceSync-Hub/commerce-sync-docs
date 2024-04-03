@@ -7,7 +7,7 @@ hero:
   text: 
   tagline: "A projekt dokimentációs oldala"
   image:
-    src: /commercesynclogo.png
+    src: https://github.com/CommerceSync-Hub/commerce-sync-docs/blob/main/docs/commercesynclogo.png
     alt: CommerceSync Bundle
   actions:
     - theme: brand
