@@ -310,3 +310,10 @@ Akkadt némi probléma a null értékekkel a termékek kapcsán, de azt is orvos
 A mai napon sikerült megoldanom a logo elhelyezését a dokumentációs oldalon. Egyszerűen a repository-ból hivatkoztam be a fájl elérési útvonalát (mintha egy külső fájl lenne) és így már rendben megjelenik a dokuemntációs oldal főoldalán.
 
 Illetve a mai napon elkészítettem a projektmunka prezentációjának prototípusát is.
+
+## 2024-04-16
+
+A mai napon kijavítottam a hibákat, mert ahogyan a teszteli naplóban is olvasható, nem működött a termék és felhasználó módosítás. Nem mentődtek az adatok. Ezeket javítottam. Ezek után néhány apró hibát is javítottam még. Illetve mivel a DataAccess.cs fájl már túl nagy volt és sok funkciót tartalmazott egyben, ezért azokat kiszerveztem egy Repository mappában lévő ProductRepository.cs-be, illetve egy UserRepository.cs-be. Ehhez kapcsolódóan az értintett fálokon is módosítást kellett végrehajtanom, hogy már ne a Data Access-ben próbálják végrehajtani a feladataikat. 
+
+Ezután a DataAcces.cs-t kiszerveztem a DataAccess mappában a gyökér könyvtárban. Mert szeretném szétbontani a hosszab kódokat az olvashatóság és karbantarthatóság miatt.
+
