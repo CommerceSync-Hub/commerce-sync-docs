@@ -118,3 +118,119 @@ Ezt az alábbi módon, a táblát létrehozásánál tudtam megadni. Abban az es
 ```
 
 Továbbá a Userek hozzáadásakor is problémába futottam, mert elsőként nem akarta engedélyezni az adatbázisba beírást. Aztán rájöttem, hogy azért mert nem jól adom meg az adatbázis hozzáférést. 
+
+## 2024-04-16
+
+A Desktop applikációnál a tesztelés során észleltem, hogy nem menti el a módosításokat. Pontosabban amikor a SearchProductView-ban módosítok egy terméket, akkor azt csak addig tárolja, amíg el nem navigálok egy másik menüpontra. Tehát ezt a hibát kell javítanom.
+
+A probléma ott van, hogy még mindig SQLite adatbázisba menti az adatokat, amit korábban használtam:
+
+
+ ```
+private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
+{
+    // Check that the selected product is not empty
+    if (SelectedProduct != null)
+    {
+        // Update the product details with the data entered in the fields
+        SelectedProduct.ProductName = txtProductName.Text;
+        SelectedProduct.Price = decimal.Parse(txtPrice.Text);
+        SelectedProduct.SalesPrice = decimal.Parse(txtSalesPrice.Text);
+        SelectedProduct.Category = cmbCategory.Text;
+        SelectedProduct.StockQuantity = int.Parse(txtStockQuantity.Text);
+        SelectedProduct.SKU = txtSKU.Text;
+        // Update additional fields with the corresponding Product properties
+
+        // Update in the database
+        using (SQLiteConnection connection = new SQLiteConnection(App.DatabasePath))
+        {
+            connection.Update(SelectedProduct);
+        }
+
+        // Close window
+        Close();
+    }
+}
+
+ ```
+
+ Tehát ezt kell most megoldanom... Ezt módosítottam is:
+
+ ```
+ private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
+{
+    if (SelectedProduct != null)
+    {
+        SelectedProduct.ProductName = txtProductName.Text;
+        SelectedProduct.Price = decimal.Parse(txtPrice.Text);
+        SelectedProduct.SalesPrice = decimal.Parse(txtSalesPrice.Text);
+        SelectedProduct.Category = cmbCategory.Text;
+        SelectedProduct.StockQuantity = int.Parse(txtStockQuantity.Text);
+        SelectedProduct.SKU = txtSKU.Text;
+        SelectedProduct.ShortDescription = txtShortDescription.Text;
+        SelectedProduct.LongDescription = txtLongDescription.Text;
+        
+
+        var dataAccess = new DataAccess(App.Server, App.Database, App.Username, App.Password);
+        dataAccess.InsertProduct(SelectedProduct); // Ez még csak insert
+
+        Close();
+    }
+}
+ ```
+
+ Viszont most egy olyan probléma lépett fel, hogy nem update-eli hanem csak insert-eli új termékként a módosított termékeket.
+ Tehát a DataAccess.cs fájlban, létre kell hoznom egy UpdateProduct metódust is. 
+
+```
+ public void UpdateProduct(Product product)
+{
+    using (var connection = new MySqlConnection(connectionString))
+    {
+        string query = "UPDATE Products SET ProductName = @ProductName, Price = @Price, SalesPrice = @SalesPrice, Category = @Category, StockQuantity = @StockQuantity, SKU = @SKU, Tags = @Tags, ShortDescription = @ShortDescription, LongDescription = @LongDescription, ImageUrl = @ImageUrl, GalleryUrls = @GalleryUrls WHERE ProductId = @ProductId";
+
+        using (var command = new MySqlCommand(query, connection))
+        {
+            command.Parameters.AddWithValue("@ProductName", product.ProductName);
+            command.Parameters.AddWithValue("@Price", product.Price);
+            command.Parameters.AddWithValue("@SalesPrice", product.SalesPrice);
+            command.Parameters.AddWithValue("@Category", product.Category);
+            command.Parameters.AddWithValue("@StockQuantity", product.StockQuantity);
+            command.Parameters.AddWithValue("@SKU", product.SKU);
+            command.Parameters.AddWithValue("@Tags", product.Tags);
+            command.Parameters.AddWithValue("@ShortDescription", product.ShortDescription);
+            command.Parameters.AddWithValue("@LongDescription", product.LongDescription);
+            command.Parameters.AddWithValue("@ImageUrl", product.ImageUrl);
+            command.Parameters.AddWithValue("@GalleryUrls", product.GalleryUrls);
+            command.Parameters.AddWithValue("@ProductId", product.ProductId);
+
+            connection.Open();
+            command.ExecuteNonQuery();
+        }
+    }
+}
+
+```
+
+A tesztelés során továbbá észrevettem, hogy az EditUserWindow esetén, a gomb felirat az, hogy "Add new User". Miközben itt módosítunk, tehát Update-elünk. Ezt módosítanom kell.
+
+```
+ <Button
+  Grid.Row="10"
+  Grid.Column="0"
+  Margin="5"
+  HorizontalAlignment="Left"
+  Content="Add New User" 
+  Click="Edit_User_Button_Click" BorderThickness="5,0,0,0"/>
+  ```
+Az alábbiak szerint:
+
+ ```
+<Button
+ Grid.Row="10"
+ Grid.Column="0"
+ Margin="5"
+ HorizontalAlignment="Left"
+ Content="Update User" 
+ Click="Edit_User_Button_Click" BorderThickness="5,0,0,0"/>
+  ```
