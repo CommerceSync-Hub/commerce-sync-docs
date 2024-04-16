@@ -234,3 +234,20 @@ Az alábbiak szerint:
  Content="Update User" 
  Click="Edit_User_Button_Click" BorderThickness="5,0,0,0"/>
   ```
+
+  Az alábbi hibákat találtam még:
+
+  Az új termék hozzáadásakor az ablak neve "NewProductWindow" ezt módosítani kellene valami közérthetőbbre.
+
+ ```
+  Title="NewProductWindow" Height="500" Width="800">
+   ```
+
+   Mondjuk így:
+
+```
+   Title="Add New Product" Height="500" Width="800">
+   ```
+   
+![Képernyőkép](<../img/new product window title.png>)
+   
