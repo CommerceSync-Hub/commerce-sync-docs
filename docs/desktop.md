@@ -1,4 +1,6 @@
-## Az asztali alkalmazás funkciói:
+# Desktop
+
+## Az asztali alkalmazás funkciói
 
 Az asztali alkalmazás segítségével a felhasználók termékeket tölthetnek fel a webshopba, illetve a felhasználók módosítására is lehetőség nyílik. Egyszerű termékek adatait fogják tudni rögzíteni. Az alkalmazás egy letisztult felülettel rendelkező, felhasználóbarát kezelést biztosító minél egyszerűbb alkalmazás létrehozása a cél. Kevés menüpont és kevés “rontási” lehetőség. A termékeket fel lehet tölteni a következő adatok segítségével: 
 

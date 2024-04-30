@@ -1,5 +1,7 @@
 # A fejlesztői csapat tagjai és feladatköreik
 
+***
+
 #### Bagi Péter (fejlesztő és tesztelő)
 - eCommerce Sync Theme – Frontend és Backend
 - WooSync – Frontend és Backend

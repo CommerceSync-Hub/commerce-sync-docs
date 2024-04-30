@@ -20,7 +20,7 @@ A WordPress és WooCommerce adminisztrációs felülete pedig számtalan útvesz
 
 Több ügyféltől is érkezett visszajelzés, hogy a WordPress adminisztrációs felülete számukra bonyolult és nehézséget jelent az, hogy a webshopjukban lévő termékeket, termékkészletet naprakészen tartsák. Elmondásuk szerint annyi a menüpont, a kattintható elem, almenüpont, elrejtett gomb és opció, hogy igazán megterhelő számukra a termékfeltöltés. Ez adta az ötletet, hogy létrehozzunk egy olyan eszközcsomagot, amely segíti a hatékonyságukat. A projekt során létrehozott programcsomaggal arra fogunk törekedni, hogy minél letisztultabb, minél felhasználóbarátabb eszközt adhassunk a korábban említett célközönség részére. Hiszen ha valamit lehet egyszerűen, akkor miért bonyolítsuk. A mai világban számtalan példa van arra, hogy a felhasználók, vagy bármilyen eszközhasználó célcsoport igényli az egyszerűséget. Gondoljunk csak a Google keresőjére, vagy az Apple termékek letisztultságára. Így a mi célunk sem kevesebb, mint, hogy a sok opcióból alkossunk keveset. Pontosabban, hogy redukáljuk az extra gombok, extra körök számát. 
 
-WordPress
+## WordPress
 
 A WordPress egy nyílt forráskódú keretrendszer, amely bárki számára elérhető. Éppen ezért hatalmas felhasználótáborral rendelkezik. 2023-ban az interneten található weboldalak 43.2%-a WordPress motorral fut. Az alapvetően blogolás célzattal létrehozott keretrendszer ma már számtalan funkciót képe ellátni, amely jócskán túlmutat a	weboldal fogalmán.
 
