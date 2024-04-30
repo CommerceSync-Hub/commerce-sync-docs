@@ -18,12 +18,3 @@ A WordPress bővítmény felel közvetlenül az adatok szinkronizálásáért, i
 tartalmazná a cron beállításokat is, amelyek az adatok szinkronizálásának
 “automatizációjáért“, pontosabban az időbeni beállításaiért felel.
 
-## WordPress Theme leírása
-
-A WordPress téma alapja: HTML, CSS (BootStrap), JavaScript, PHP, VUEjs,
-jQuery. Illetve egy adatbázis is szükséges a működéshez (MariaDB). Ezt
-szinkronizálja a bővítmény a desktop applikációval.
-A téma a BootStrap segítségével modern felületen megfelelően fog működni. A
-téma képes lesz megjeleníteni a webáruházban lévő termékeket, illetve a
-szükséges aloldalak tartalmát is. Kezdőlap, Bemutatkozás, Üzlet, Kosár,
-CheckOut, Fiók, Kapcsolat. 
