@@ -29,14 +29,14 @@ export default defineConfig({
       {
         text: 'Fejlesztői naplók',
         items: [
-          { text: 'Teszáry Péter', link: 'fejlesztoi-naplok/teszary-peter-fn' },
+          { text: 'Fejlesztői napló', link: 'fejlesztoi-naplok/fejlesztoi-naplo' },
         ]
         
       },
       {
         text: 'Tesztelési naplók',
         items: [
-          { text: 'Teszáry Péter', link: 'tesztelesi-naplok/teszary-peter-tn' },
+          { text: 'Tesztelési napló', link: 'tesztelesi-naplok/tesztelesi-naplo' },
         ]
         
       },
