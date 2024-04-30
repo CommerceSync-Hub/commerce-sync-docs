@@ -22,7 +22,6 @@ features:
     details: Desktop App amely egyszerűbbé teszi a termékek feltöltését a WooCommerce alapú Webshopba
   - title: WooSync
     details: Bővítmény amely biztosítja a kommunikációt a Desktop App és a Weboldal között
-  - title: CommerceSync Theme
-    details: Egy BootStrap alapú WordPress téma
+
 ---
 
