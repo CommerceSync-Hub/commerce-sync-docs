@@ -1,4 +1,4 @@
-# Teszáry Péter - Tesztelési napló
+# Tesztelési napló
 
 ## 2024-03-19
 
@@ -12,8 +12,8 @@ A login oldalon a PasswordBox nem kapja meg ugyan azokat a beállításokat mint
 
 ## 2024-03-24
 
-A mai napon a dokumentációs oldalon dolgoztam. És végre sikerül a deployment a Github Pages-re. 
-Szerettem volna a képeket hozzáadni a dokumentációhoz ahol csak lehet. Ezért létrehoztam egy img mappát a \commerce-sync-docs\docs\.vitepress\dist\assets mappában. Ide helyeztem a képeket, mert azt láttam, hogy a build után ide kerülnek a képek és minden egyéb fájl ami az oldalhoz szükséges. A probléma akkor bújt a felszínre, amikor buildeltem az oldalt. Sehogy sem akarta megtalálni a képeket. Viszont nem szerettem volna ha a képek a gyökér könyvtárban maradnak, mert az még sem esztétikus. Viszont állandóan hibára futottam:
+
+A mai napon a dokumentációs oldalon dolgoztunk. Végre sikerült a deployment a Github Pages-re. Szerettünk volna képeket hozzáadni a dokumentációhoz, ahol csak lehet. Ezért létrehoztunk egy img mappát a \commerce-sync-docs\docs.vitepress\dist\assets mappában. Ide helyeztük a képeket, mert láttuk, hogy a build után ide kerülnek a képek és minden egyéb fájl, ami az oldalhoz szükséges. A probléma akkor bukkant fel, amikor buildeltük az oldalt. Sehogyan sem akarta megtalálni a képeket. Viszont nem szerettünk volna, ha a képek a gyökér könyvtárban maradnak, mert az mégsem esztétikus. Állandóan hibára futottunk:
 
 ```
   vitepress v1.0.0-rc.42
@@ -29,15 +29,15 @@ PS C:\Users\peter\Documents\GitHub\commerce-sync-docs>
 
 ```
 
-De jónéhány tesztelés után megtaláltam a megoldást. A gyökér mappában kell elhelyeznem az img mappát és abba a fájlokat. Ezek után már megtalálta a fájlokat, sikeres volt a build és sikeres a deployment is.
+De jónéhány tesztelés után megtaláltuk a megoldást. A gyökér mappában kell elhelyeznünk az img mappát és abba a fájlokat. Ezek után már megtalálta a fájlokat, sikeres volt a build és sikeres a deployment is.
 
 ## 2024-03-25
 
-A mai hiba a dokumentációs oldalon volt. Próbáltam megjeleníteni a logónkat a kezdőlapon, de sehogy sem sikerült. :dev státuszban rendben megjelent minden, de build után, preview-al már nem működik. Akárhogy probálkozom. A többi képi eleme rendben látszik, de a logo nem. 404 hibát kapok vissza a konzolban.
+A mai hiba a dokumentációs oldalon volt. Próbáltuk megjeleníteni a logónkat a kezdőlapon, de sehogy sem sikerült. :dev státuszban rendben megjelent minden, de build után, preview-al már nem működik akárhogy próbálkoztunk. A többi képi eleme rendben látszik, de a logo nem. 404 hibát kapunk vissza a konzolban.
 
 ## 2024-03-26
 
-A mai napon próbálom a bővítményben módosítani a kódot, hogy a genereált api kulcs a megfelelő helyen jelenjen meg. 
+A mai napon próbáltunk a bővítményben módosítani a kódot, hogy a genereált api kulcs a megfelelő helyen jelenjen meg. 
 A korábbi kód az options táblába mentette azt, de ez így nem megfelelő. 
 
 A korábbi kód, amely nem megfelelő helyre mentette az API kulcsot:
@@ -88,13 +88,13 @@ function generate_api_key_callback()
     }
 ```
 
-Most már csak azt kell javítanom, hogy megjelenjen a settings oldalon is, ám lehet, hogy később ezt az opciót elhagyom. Felesleges.
+Most már csak azt kell javítanunk, hogy megjelenjen a settings oldalon is, ám lehet, hogy később ezt az opciót elhagyjuk. Felesleges.
 
 ## 2024-04-02
 
-A mai napon miután átszerveztem mindent, hogy az applikácó ezentúl MySQL-ben tárolja az adatokat, némi problémába futottam. Ha nem lett kitöltve a "tag", "GalleryUrls" és "ImageUrl" mező, akkor null értékre hoibát dobott a program. Ezért nem tudtam visszakérni sem az adatokat a SearchProductView oldalon sem. Tehát meg kellett oldanom, hogy null értéket is fel lehessen venni a termékek hozzáadásakor. 
+A mai napon miután átszerveztük mindent, hogy az applikácó ezentúl MySQL-ben tárolja az adatokat, némi problémába futotttunk. Ha nem lett kitöltve a "tag", "GalleryUrls" és "ImageUrl" mező, akkor null értékre hibát dobott a program. Ezért nem tudtuk visszakérni sem az adatokat a SearchProductView oldalon sem. Tehát meg kellett oldanunk, hogy null értéket is fel lehessen venni a termékek hozzáadásakor. 
 
-Ezt az alábbi módon, a táblát létrehozásánál tudtam megadni. Abban az esetben - ahogyan én is jártam - ha volt már tábla, ki kellett törölnöm, mert a létrehozáskor adom meg neki a default értéket:
+Ezt az alábbi módon, a táblát létrehozásánál tudtuk megadni. Abban az esetben - ahogyan mi is jártunk - ha volt már tábla, ki kellett törölnünk, mert a létrehozáskor adjuk meg neki a default értéket:
 
 
 ```
@@ -117,13 +117,13 @@ Ezt az alábbi módon, a táblát létrehozásánál tudtam megadni. Abban az es
 
 ```
 
-Továbbá a Userek hozzáadásakor is problémába futottam, mert elsőként nem akarta engedélyezni az adatbázisba beírást. Aztán rájöttem, hogy azért mert nem jól adom meg az adatbázis hozzáférést. 
+Továbbá a Userek hozzáadásakor is problémába futottunk, mert elsőként nem akarta engedélyezni az adatbázisba beírást. Aztán rájöttünk, hogy azért mert nem jól adjkuk meg az adatbázis hozzáférést. 
 
 ## 2024-04-16
 
-A Desktop applikációnál a tesztelés során észleltem, hogy nem menti el a módosításokat. Pontosabban amikor a SearchProductView-ban módosítok egy terméket, akkor azt csak addig tárolja, amíg el nem navigálok egy másik menüpontra. Tehát ezt a hibát kell javítanom.
+A Desktop applikációnál a tesztelés során észleltük, hogy nem menti el a módosításokat. Pontosabban amikor a SearchProductView-ban módosítunk egy terméket, akkor azt csak addig tárolja, amíg el nem navigálunk egy másik menüpontra. Tehát ezt a hibát kell javítanunk.
 
-A probléma ott van, hogy még mindig SQLite adatbázisba menti az adatokat, amit korábban használtam:
+A probléma ott van, hogy még mindig SQLite adatbázisba menti az adatokat, amit korábban használtunk:
 
 
  ```
@@ -154,7 +154,7 @@ private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
 
  ```
 
- Tehát ezt kell most megoldanom... Ezt módosítottam is:
+ Tehát ezt kell most megoldanunk... Ezt módosítottuk is:
 
  ```
  private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
@@ -180,7 +180,7 @@ private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
  ```
 
  Viszont most egy olyan probléma lépett fel, hogy nem update-eli hanem csak insert-eli új termékként a módosított termékeket.
- Tehát a DataAccess.cs fájlban, létre kell hoznom egy UpdateProduct metódust is. 
+ Tehát a DataAccess.cs fájlban, létre kell hoznunk egy UpdateProduct metódust is. 
 
 ```
  public void UpdateProduct(Product product)
@@ -212,7 +212,7 @@ private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
 
 ```
 
-A tesztelés során továbbá észrevettem, hogy az EditUserWindow esetén, a gomb felirat az, hogy "Add new User". Miközben itt módosítunk, tehát Update-elünk. Ezt módosítanom kell.
+A tesztelés során továbbá észrevettük, hogy az EditUserWindow esetén, a gomb felirat az, hogy "Add new User". Miközben itt módosítunk, tehát Update-elünk. Ezt módosítanunk kell.
 
 ```
  <Button
@@ -235,7 +235,7 @@ Az alábbiak szerint:
  Click="Edit_User_Button_Click" BorderThickness="5,0,0,0"/>
   ```
 
-  Az alábbi hibákat találtam még:
+  Az alábbi hibákat találtuk még:
 
   Az új termék hozzáadásakor az ablak neve "NewProductWindow" ezt módosítani kellene valami közérthetőbbre.
 
